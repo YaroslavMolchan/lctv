@@ -1,0 +1,143 @@
+Errbot
+======
+
+*Errbot is a chatbot, a daemon that connects to your favorite chat service and bring
+your tools into the conversation.*
+
+The goal of the project is to make it easy for you to write your own plugins so you 
+can make it do whatever you want: a deployment, retrieving some information online,
+trigger a tool via an API, troll a co-worker,...
+
+Errbot is being used in a lot of different contexts: chatops (tools for devops),
+online gaming chatrooms like EVE, video streaming chatrooms like `livecoding.tv <http://livecoding.tv>`_, 
+home security, etc.
+
+Screenshots
+-----------
+
+.. raw:: html
+
+    <div class="screenshots">
+        <a href="_static/screenshots/help.png" class="fancybox" title="Showing output of the built-in help command">
+            <img src="_static/screenshots/thumb_help.png" width="155" height="150" alt="Showing output of the built-in help command" />
+        </a>
+        <a href="_static/screenshots/quota.png" class="fancybox" title="Err running on HipChat, showing off a (businesss-specific) command to get and set the disk quotas for mail accounts">
+            <img src="_static/screenshots/thumb_quota.png" width="268" height= "150" alt="Err running on HipChat, showing off a (businesss-specific) command to get and set the disk quotas for mail accounts" />
+        </a>
+        <a href="_static/screenshots/basecamp.png" class="fancybox" title="An older version of Err, running on Basecamp">
+            <img src="_static/screenshots/thumb_basecamp.png" width="181" height= "150" alt="An older version of Err, running on Basecamp" />
+        </a>
+    </div>
+
+Simple to build upon
+--------------------
+
+Extending Errbot and adding your own commands can be done by creating a plugin, which
+is simply a class derived from :class:`~errbot.botplugin.BotPlugin`. 
+The docstrings will be automatically reused by the :ref:`\!help <builtin_help_function>`
+command::
+
+    from errbot import BotPlugin, botcmd
+
+    class HelloWorld(BotPlugin):
+        """Example 'Hello, world!' plugin for Err."""
+
+        @botcmd
+        def hello(self, msg, args):
+            """Say hello to the world."""
+            return "Hello, world!"
+
+Once you said "!hello" in your chatroom, the bot will answer "Hello, world!".
+
+Batteries included
+------------------
+
+We aim to give you all the tools you need to build a customized bot safely, without
+having to worry about basic functionality. As such, Err comes with a wealth of
+features out of the box.
+
+.. toctree::
+  :maxdepth: 2
+
+  features
+
+
+Sharing
+-------
+
+One of the main goals of Errbot is to make it easy to share your plugin with others as well.
+
+Err features a built-in *repositories command* (`!repos`) which can be used to
+install, uninstall and update plugins made available by the community. Making your
+plugin available through this command only requires you to publish it as a publicly
+available Git repository.
+
+You may also discover plugins from the community on our `plugin list`_ that we update from plugins found on github.
+
+
+Community
+---------
+
+Err has a `Google plus community`_, which is the best place to discuss anything 
+related to Errbot as well as promote your own creations !
+This is also the place where you will find announcements of new versions and other
+news related to the project.
+
+You can also interact directly with the community online from the "Open Chat"
+button at the bottom of this page. Don't be shy and feel free to ask any question 
+there, we are more than happy to help you.
+
+If you think you hit a bug or the documentation is not clear enough,
+you can `open an issue`_ or even better, open a pull request.
+
+
+Getting involved
+----------------
+
+.. toctree::
+  :maxdepth: 3
+
+  contributing
+
+
+User guide
+----------
+
+.. toctree::
+  :maxdepth: 2
+
+  user_guide/setup
+  user_guide/interaction
+  user_guide/plugin_development/index
+  user_guide/sentry
+  user_guide/backend_development/index
+
+
+API documentation
+-----------------
+
+.. toctree::
+  :maxdepth: 3
+
+  errbot
+
+
+Release history
+---------------
+
+.. toctree::
+  :maxdepth: 2
+
+  changes
+
+
+License
+-------
+
+Err is free software, available under the GPL-3 license. Please refer to the
+:download:`full license text <gpl-3.0.txt>` for more details.
+
+.. _`Google plus community`: https://plus.google.com/b/101905029512356212669/communities/117050256560830486288
+.. _`GitHub page`: http://github.com/gbin/err/
+.. _`plugin list`: https://github.com/gbin/err/wiki
+.. _`open an issue`: https://github.com/gbin/err/issues
