@@ -57,7 +57,9 @@ Prerequisites
 --------
 
 Python 3.3+
+
 Ubuntu 14.04 or above
+
 Spotify
 
 Installation
