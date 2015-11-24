@@ -48,14 +48,14 @@ BACKEND = 'XMPP'
 
 # The location where all of Err's data should be stored. Make sure to set
 # this to a directory that is writable by the user running the bot.
-BOT_DATA_DIR = '/home/jadson/www/lctv/storage/'
+BOT_DATA_DIR = '/home/molchan/www/lctv/storage/'
 
 # Set this to a directory on your system where you want to load extra
 # plugins from, which is useful mostly if you want to develop a plugin
 # locally before publishing it. Note that you can specify only a single
 # directory, however you are free to create subdirectories with multiple
 # plugins inside this directory.
-BOT_EXTRA_PLUGIN_DIR = None
+BOT_EXTRA_PLUGIN_DIR = '/home/molchan/www/lctv/plugins/'
 
 # If you use an external backend as a plugin,
 # this is where you tell err where to find it.
@@ -73,7 +73,7 @@ BOT_EXTRA_PLUGIN_DIR = None
 
 # The location of the log file. If you set this to None, then logging will
 # happen to console only.
-BOT_LOG_FILE = '/home/jadson/www/lctv/storage/err.log'
+BOT_LOG_FILE = '/home/molchan/www/lctv/storage/err.log'
 
 # The verbosity level of logging that is done to the above logfile, and to
 # the console. This takes the standard Python logging levels, DEBUG, INFO,
@@ -102,8 +102,8 @@ BOT_ASYNC = True
 # The identity, or credentials, used to connect to a server
 BOT_IDENTITY = {
     # XMPP (Jabber) mode
-    'username': 'yaroslavmolchan@livecoding.tv',  # The JID of the user you have created for the bot
-    'password': 'gta250792',       # The corresponding password for this user
+    'username': 'lctv@livecoding.tv',  # The JID of the user you have created for the bot
+    'password': 'password',       # The corresponding password for this user
     'server': ('livecoding.tv',5222), # server override
 
     ## HipChat mode (Comment the above if using this mode)
@@ -136,20 +136,20 @@ BOT_IDENTITY = {
 # Set the admins of your bot. Only these users will have access
 # to the admin-only commands.
 #
-BOT_ADMINS = ('yaroslavmolchan@livecoding.tv',)
+BOT_ADMINS = ('jadson',)
 
 # Chatrooms your bot should join on startup. For the IRC backend you
 # should include the # sign here. For XMPP rooms that are password
 # protected, you can specify another tuple here instead of a string,
 # using the format (RoomName, Password).
-CHATROOM_PRESENCE = ('ya@chat.livecoding.tv',)
+CHATROOM_PRESENCE = ('jadson@chat.livecoding.tv',)
 
 # The FullName, or nickname, your bot should use. What you set here will
 # be the nickname that Err shows in chatrooms. Note that some XMPP
 # implementations, notably HipChat, are very picky about what name you
 # use. In the case of HipChat, make sure this matches exactly with the
 # name you gave the user.
-CHATROOM_FN = 'yaroslavmolchan'
+CHATROOM_FN = 'LCTV'
 
 ##########################################################################
 # Prefix configuration                                                   #
@@ -255,7 +255,7 @@ REVERSE_CHATROOM_RELAY = {}
 # change this depending on your environment. Setting this to None disables
 # certificate validation, which can be useful if you have a self-signed
 # certificate for example.
-#XMPP_CA_CERT_FILE = "/etc/ssl/certs/ca-certificates.crt"
+# XMPP_CA_CERT_FILE = "/etc/ssl/certs/ca-certificates.crt"
 XMPP_CA_CERT_FILE = None
 
 # Influence the security methods used on connection with XMPP-based

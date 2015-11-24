@@ -1,0 +1,9 @@
+[Core]
+Name = LCTV
+Module = lctv
+
+[Python]
+Version = 2+
+
+[Documentation]
+Description = Livecoding.tv Bot plugin

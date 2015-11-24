@@ -1,44 +1,80 @@
-
-.. image:: https://img.shields.io/travis/gbin/err/master.svg
-   :target: https://travis-ci.org/gbin/err/
-
-.. image:: https://img.shields.io/pypi/v/err.svg
-   :target: https://pypi.python.org/pypi/err
-   :alt: Latest Version
-
-.. image:: https://img.shields.io/pypi/dm/err.svg
-   :target: https://pypi.python.org/pypi/err
-   :alt: Downloads
-
-.. image:: https://img.shields.io/github/license/gbin/err.svg
-   :target: https://pypi.python.org/pypi/err
-   :alt: License
-
-.. image:: https://img.shields.io/badge/gitter-join%20chat%20%E2%86%92-brightgreen.svg
-   :target: https://gitter.im/gbin/err?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge 
-   :alt: Join the chat at https://gitter.im/gbin/err
-
-|
-|
-
-.. image:: http://gbin.github.io/err/_static/err_speech.png
-   :target: http://errbot.net
-
-
-Err
+Chat bot for Livecoding.tv
 ===
 
-Err is a chatbot. It allows you to start scripts interactively from your chatrooms
-for any reason: random humour, chatops, starting a build, monitoring commits, triggering
-alerts...
-
-It is written and easily extensible in Python.
-
-Err is available as open source software and released under the GPL v3 license.
-
+This is chat bot for Livecoding.tv that connect to chat via XMPP.
+I create this bot from Ubuntu and all commands will work corectly only in Ubuntu.
 
 Features
 --------
+
+- Notification when viewer join the stream or left it. (Desktop and chat notification)
+- Greet and say goodbye to viewers with custom messages.
+- Bot can ask viewers some questions when they join the room.
+- Bot tell some custom text with custom interval.
+- VIP users system.
+- Full control with Stream music and song requests
+- Voice messages via chat command
+
+Commands
+--------
+
+!favorite_language
+!favorite_framework
+!favorite_ide
+!favorite_viewer
+!favorite_music
+!streamingguide
+!support
+!newfeatures
+!tools
+!current task - What I`m doing now
+!say [message] - Bot say your message
+!uptime - Stream time
+!viewers - List of viewers with their current online time
+!vip list - List of VIP users
+
+!song - Show current song name
+!song next - Skip to next song (only VIP)
+!song previous - Skip to previous song (only VIP)
+!song search [query] - Show songs list by query
+!song last - Show last song search
+!song request [Number] - Add song from !song search to playlist
+!song favorite - Songs list of songs that requested more than others
+
+!ball8 - Ask question to magic 8 ball
+
+Admin commands:
+!song enable - Enable song request for all users
+!song disable - Enable song request only for VIP users
+!vip [add|remove] - Control of VIP users
+!offline - Bot say goodbye for all viewers and make them offline
+
+If you have any ideas write me a private message.
+
+
+Prerequisites
+--------
+Python 3.3+
+Ubuntu 14.04 or above
+Spotify
+
+Installation
+--------
+**Bot configuration**
+
+**Spotify**
+- If you want to use !song commands you can create new App in https://developer.spotify.com/
+- Create new playlist for song requests and get Playlist ID.
+Then edit this code in /plugins/lctv.py: 
+spotify_data = {
+    'username': 'Your username',
+    'playlist_id': 'Playlist ID',
+    'token': '',
+    'client_id': 'Client App ID',
+    'client_secret': 'Client App Secret',
+    'redirect_uri': 'http://localhost:8888/callback',
+    'scope' : 'playlist-modify-public'
+}
 
 **Chat servers support**
 
@@ -230,3 +266,6 @@ to create a "Hello, world!" plugin for Err::
 This plugin will create the command "!hello" which, when issued, returns "Hello, world!"
 to you. For more info on everything you can do with plugins, see the
 `plugin development guide <http://errbot.net/user_guide/plugin_development/>`_.
+
+
+Need espeak

@@ -1,0 +1,30 @@
+.venv
+*.pyc
+/.idea
+/atlassian-ide-plugin.xml
+/.settings
+/config.py
+nohup.out
+/build
+/dist
+/err.egg-info*
+/config-*.egg
+/config*.py
+/docs/_build
+/docs/_gh-pages
+/docs/errbot.rst
+/docs/errbot.*.rst
+/.cache
+/.coverage
+/data
+/config.py.*
+
+# tools
+/tools/Home.md
+/tools/token
+
+*.log
+*.crt
+
+# OS X
+.DS_Store
