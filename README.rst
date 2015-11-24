@@ -110,7 +110,9 @@ If you want to add, edit or remove some custom messages edit next variables:
 **Spotify**
 - If you want to use !song commands you can create new App in https://developer.spotify.com/
 - Create new playlist for song requests and get Playlist ID.
+
 Then edit this code in /plugins/lctv.py: 
+
 spotify_data = {
     'username': 'Your username',
     'playlist_id': 'Playlist ID',
