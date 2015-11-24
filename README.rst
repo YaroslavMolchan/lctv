@@ -87,7 +87,7 @@ Spotify
 Installation
 --------
 
-First you need to register new user in `Livecoding <https://livecoding.tv/>`.
+First you need to register new user in `Livecoding https://livecoding.tv`.
 Sign Up only with Email and Password.
 
 **Bot configuration**
