@@ -21,37 +21,59 @@ Commands
 --------
 
 !favorite_language
+
 !favorite_framework
+
 !favorite_ide
+
 !favorite_viewer
+
 !favorite_music
+
 !streamingguide
+
 !support
+
 !newfeatures
+
 !tools
+
 !current task - What I`m doing now
+
 !say [message] - Bot say your message
+
 !uptime - Stream time
+
 !viewers - List of viewers with their current online time
+
 !vip list - List of VIP users
 
+
 !song - Show current song name
+
 !song next - Skip to next song (only VIP)
+
 !song previous - Skip to previous song (only VIP)
+
 !song search [query] - Show songs list by query
+
 !song last - Show last song search
+
 !song request [Number] - Add song from !song search to playlist
+
 !song favorite - Songs list of songs that requested more than others
 
 !ball8 - Ask question to magic 8 ball
 
 Admin commands:
-!song enable - Enable song request for all users
-!song disable - Enable song request only for VIP users
-!vip [add|remove] - Control of VIP users
-!offline - Bot say goodbye for all viewers and make them offline
 
-If you have any ideas write me a private message.
+!song enable - Enable song request for all users
+
+!song disable - Enable song request only for VIP users
+
+!vip [add|remove] - Control of VIP users
+
+!offline - Bot say goodbye for all viewers and make them offline
 
 Prerequisites
 --------
