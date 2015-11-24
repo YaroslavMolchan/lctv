@@ -69,6 +69,7 @@ First you need to register new user in `Livecoding <https://livecoding.tv/>`.
 Sign Up only with Email and Password.
 
 **Bot configuration**
+
 Edit file config.py:
     BOT_DATA_DIR and BOT_EXTRA_PLUGIN_DIR - paths to storage and plugins
 
@@ -83,6 +84,7 @@ Next enter your bot username and password in BOT_IDENTITY
     CHATROOM_FN - bot name
 
 **Storage configuration**
+
 Create file lctv.db with CHMOD 777 in storage folder.
 Uncomment in the plugins/lctv_orm.py lines with:
     # db.connect()
@@ -91,12 +93,14 @@ And run this file and then comment or delete this lines.
 If you get error change path to lctv.db file in SqliteDatabase.
 
 **Bot data**
+
     channel - your channel
     bot - your bot login
     owner - your username
     task - Your current task
 
 **Custom messages**
+
 If you want to add, edit or remove some custom messages edit next variables:
     new_visitors_online - Custom messages for greet new viewer
     visitors_online - Custom messages for greet old viewer
@@ -108,6 +112,7 @@ If you want to add, edit or remove some custom messages edit next variables:
     poller_messages_data - list of messages that bot say every 10 minutes (time you can change)
 
 **Spotify**
+
 - If you want to use !song commands you can create new App in https://developer.spotify.com/
 - Create new playlist for song requests and get Playlist ID.
 
@@ -124,4 +129,5 @@ spotify_data = {
 }
 
 **Support**
+
 If you have any problems or ideas write me email at yaroslav@molchan.me
